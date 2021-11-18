@@ -1,0 +1,5 @@
+/**ESTILOS UNICOS PARA ADMINS DE MAN Y TYB**/
+
+.hideshowbtns, a.btn.btn-primary.new-camp.hideshowbtns{
+    display: none !important;
+}

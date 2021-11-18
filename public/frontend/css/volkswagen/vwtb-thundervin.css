@@ -1,0 +1,19 @@
+.front-property-card {
+    width: 80%;
+    background: #f3f3f3;
+    float: right;
+}
+ #button-data.msg-ok, #button-data{
+          margin-top: 1em  !important;
+          display:block !important;
+  }
+#button-data.msg-ok .btn.searchbtn2{
+          display:block !important;
+  }
+#nombre-data, #nombre-data.msg-ok.vin-camp-p {
+    display: block !important;
+    visibility: visible !important;
+}
+.panel-collapse.collapse.in.show > p, .panel-collapse.collapse.show > p {
+    font-size: 16px !important;
+}

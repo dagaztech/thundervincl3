@@ -1,0 +1,988 @@
+/*!
+ * Start Bootstrap - Landing Page v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/landing-page)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
+ */
+
+
+@import 'https://vwcamionesybuses.co/assets/vendor/mdi/font/css/materialdesignicons.min.css';
+
+@import 'https://awscdn.volkswagen.co/assets/dependencies/Kwf_Assets_Package_ComponentFrontend/Frontend/es-CO/1.css';
+
+/**FONTS**/
+@font-face {
+	font-family: 'VW Head';
+	src: url('fonts/VWHeadWeb-Bold.eot');
+	src: url('fonts/VWHeadWeb-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/VWHeadWeb-Bold.woff') format('woff'), url('fonts/VWHeadWeb-Bold.ttf') format('truetype'), url('fonts/VWHeadWeb-Bold.svg#VWHeadWeb-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'VW Head';
+	src: url('fonts/VWHeadWeb-BoldItalic.eot');
+	src: url('fonts/VWHeadWeb-BoldItalic.eot?#iefix') format('embedded-opentype'), url('fonts/VWHeadWeb-BoldItalic.woff') format('woff'), url('fonts/VWHeadWeb-BoldItalic.ttf') format('truetype'), url('fonts/VWHeadWeb-BoldItalic.svg#VWHeadWeb-BoldItalic') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'VW Head';
+	src: url('fonts/VWHeadWeb-Regular.eot');
+	src: url('fonts/VWHeadWeb-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/VWHeadWeb-Regular.woff') format('woff'), url('fonts/VWHeadWeb-Regular.ttf') format('truetype'), url('fonts/VWHeadWeb-Regular.svg#VWHeadWeb-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'VW Head';
+	src: url('fonts/VWHeadWeb-RegularItalic.eot');
+	src: url('fonts/VWHeadWeb-RegularItalic.eot?#iefix') format('embedded-opentype'), url('fonts/VWHeadWeb-RegularItalic.woff') format('woff'), url('fonts/VWHeadWeb-RegularItalic.ttf') format('truetype'), url('fonts/VWHeadWeb-RegularItalic.svg#VWHeadWeb-RegularItalic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+/** Text Fonts **/
+@font-face {
+	font-family: 'VW Text';
+	src: url('fonts/VWTextWeb-Bold.eot');
+	src: url('fonts/VWTextWeb-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/VWTextWeb-Bold.woff') format('woff'), url('fonts/VWTextWeb-Bold.ttf') format('truetype'), url('fonts/VWTextWeb-Bold.svg#VWTextWeb-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'VW Text';
+	src: url('fonts/VWTextWeb-BoldItalic.eot');
+	src: url('fonts/VWTextWeb-BoldItalic.eot?#iefix') format('embedded-opentype'), url('fonts/VWTextWeb-BoldItalic.woff') format('woff'), url('fonts/VWTextWeb-BoldItalic.ttf') format('truetype'), url('fonts/VWTextWeb-BoldItalic.svg#VWTextWeb-BoldItalic') format('svg');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'VW Text';
+	src: url('fonts/VWTextWeb-Regular.eot');
+	src: url('fonts/VWTextWeb-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/VWTextWeb-Regular.woff') format('woff'), url('fonts/VWTextWeb-Regular.ttf') format('truetype'), url('fonts/VWTextWeb-Regular.svg#VWTextWeb-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'VW Text';
+	src: url('fonts/VWTextWeb-RegularItalic.eot');
+	src: url('fonts/VWTextWeb-RegularItalic.eot?#iefix') format('embedded-opentype'), url('fonts/VWTextWeb-RegularItalic.woff') format('woff'), url('fonts/VWTextWeb-RegularItalic.ttf') format('truetype'), url('fonts/VWTextWeb-RegularItalic.svg#VWTextWeb-RegularItalic') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'VW Text Light';
+	src: url('fonts/VWTextWeb-Light.eot');
+	src: url('fonts/VWTextWeb-Light.eot?#iefix') format('embedded-opentype'), url('fonts/VWTextWeb-Light.woff') format('woff'), url('fonts/VWTextWeb-Light.ttf') format('truetype'), url('fonts/VWTextWeb-Light.svg#VWTextWeb-Light') format('svg');
+	font-weight: lighter;
+	font-style: normal;
+}
+@font-face {
+	font-family: "iconFont";
+	src: url("fonts/font.eot");
+	src: url("fonts/font.eot?#iefix") format("embedded-opentype"), url("fonts/font.woff") format("woff"), url("fonts/font.ttf") format("truetype"), url("fonts/font.svg#font") format("svg");
+	font-weight: normal;
+	font-style: normal
+}
+@font-face {
+	font-family: "Material Design Icons";
+	src: url("../fonts/materialdesignicons-webfont.eot?v=3.4.93");
+	src: url("../fonts/materialdesignicons-webfont.eot?#iefix&v=3.4.93") format("embedded-opentype"), url("../fonts/materialdesignicons-webfont.woff2?v=3.4.93") format("woff2"), url("../fonts/materialdesignicons-webfont.woff?v=3.4.93") format("woff"), url("../fonts/materialdesignicons-webfont.ttf?v=3.4.93") format("truetype"), url("../fonts/materialdesignicons-webfont.svg?v=3.4.93#materialdesigniconsregular") format("svg");
+	font-weight: normal;
+	font-style: normal
+}
+.vw5-themeIconFontIcons:before {
+	display: inline-block;
+	font-family: "iconFont";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-decoration: inherit;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	content: attr(data-icon)
+}
+@font-face {
+	font-family: "iconFontNGW";
+	src: url("fonts/font.eot");
+	src: url("fonts/font.eot?#iefix") format("embedded-opentype"), url("fonts/font.woff") format("woff"), url("fonts/font.ttf") format("truetype"), url("fonts/font.svg#font") format("svg");
+	font-weight: normal;
+	font-style: normal
+}
+/*BASE*/
+body {
+	font-family: 'VW Text', verdana, sans-serif;
+	font-size: 14px;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'VW Head', Arial, Helvetica, sans-serif;
+	font-weight: 700;
+}
+.wrapper {
+	width: 940px;
+	margin: 0px auto;
+}
+
+footer.footer {
+	padding-top: 4rem;
+	padding-bottom: 4rem
+}
+.navbar {
+	border-radius: 4px;
+	position: fixed;
+}
+.affix {
+	top: 0;
+	width: 100%;
+	z-index: 9999 !important;
+}
+
+.affix + .container-fluid {
+	padding-top: 70px;
+}
+.navbar-nav > li {
+	float: left;
+}
+.nav > li {
+	position: relative;
+	display: block;
+}
+a.menuSubItem {
+	line-height: 32px;
+	padding-right: 30px;
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000 !important;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+a.menuSubItem current, a.menuSubItem:hover {
+	color: #fff;
+}
+.container > .navbar-collapse {
+	padding: 0px;
+}
+/**HEADER**/
+header {
+	padding: 75px 0 120px !important;
+}
+h1, h2, h3, h4, h5, h6, .headline-title h2 {
+	font-family: 'VW Head', Arial, Helvetica, sans-serif !important;.bg-photo-tb
+	font-weight: bold;
+	color: #1d1f20;
+	margin-bottom: 20px;
+}
+.vw5-webStandard h3 {
+	font-size: 28px !important;
+	line-height: 33px;
+	font-family: 'VW Head', Arial, Helvetica, sans-serif;
+}
+#results > div:nth-child(1) > div > div > h3, .habeasdata h3 {
+	font-size: 28px;
+	line-height: 33px;
+	font-weight: 900;
+}
+.vw5-headline--black {
+	font-size: 80px;
+	line-height: 81px;
+	text-align: left;
+	margin-bottom: 75px;
+	font-weight: 900;
+	font-family: 'VW Head', Arial, Helvetica, sans-serif;
+	color:#fff;
+}
+#navbarResponsive > ul > li {
+	margin-right: 30px;
+	font-family: 'VW Text', Arial, Helvetica, sans-serif;
+}
+.vw5-webStandard a {
+	text-decoration: none;
+	color: #0099da;
+	outline: none;
+	font-family: 'VW Text', Arial, Helvetica, sans-serif;
+}
+#navbarResponsive > ul > li > a.current {
+	color: #fff !important;
+}
+.btn-primary {
+	background: #0099da !important;
+	color: #fff;
+	box-sizing: border-box;
+	display: table-cell;
+	font-family: 'VW Text', Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+	vertical-align: middle;
+	border-radius: 4px;
+	height: 42px;
+	max-height: 42px;
+	min-width: 198px;
+	padding: 0 18px;
+	word-wrap: break-word;
+	text-transform: none;
+	border-color: #0099da !important;
+}
+ul.footer-links {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+ul.footer-links li {
+	border-bottom: 1px solid #dee1e3;
+	padding: 12px 0;
+	font-size: 16px;
+	line-height: 25px;
+	font-family: 'VW Text Light', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	width: 50%;
+	color: #2f3538;
+}
+ul.footer-links li a {
+	font-size: 14px;
+	font-weight: normal;
+	color: #2f3538;
+}
+ul.footer-links2 li {
+	border-bottom: 1px solid #dee1e3;
+	padding: 12px 0;
+	font-size: 16px;
+	line-height: 25px;
+	font-family: 'VW Text', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	width: 50%;
+	color: #2f3538;
+}
+.vw5-themeIconImageIcon.vw5-icon {
+	float: left;
+	width: 30px;
+	margin-right: 10px;
+}
+/**MENU PRINCIPAL**/
+.vw5-themeMenuMain{padding-top: 0 !important;}
+.primary-main-menu {
+	position: fixed;
+	height: 100%;
+	height: 100vh;
+	width: 96px;
+	z-index: 2;
+	background: #fff;
+	background: #fff;
+	border-right: 1px solid #dee1e3;
+}
+ul.vw5-themeMenuMain__menu {
+	padding: 0;
+	list-style: none;
+}
+
+ul.vw5-themeMenuMain__menu li {
+	list-style-type: none !important;
+	list-style-image: none !important;
+	margin-bottom: 0px;
+	padding: 20% 10px 0 10px;
+	color: #2f3538;
+	box-sizing: border-box;
+	border-bottom: 1px solid #dee1e3;
+	text-align: center;
+	height: 90px;
+}
+ul.vw5-themeMenuMain__menu li.logo-wrapper {
+	padding: 25px 10px 95px 10px !important;
+}
+ul.vw5-themeMenuMain__menu li a {
+	color: #2f3538;
+	text-align: center;
+}
+.vw5-themeMenuMain__item a .vw5-icon, .vw5-themeMenuMain__moreMenuItem a .vw5-icon {
+	margin-left: auto;
+	margin-right: auto;
+	color: #808890;
+	display: block;
+	height: 25px;
+}
+.vw5-themeIconFontIcons:before {
+	font-size: 40px;
+	line-height: 30px;
+}
+.menuItemText {
+	width: 100%;
+	color: #808890;
+	line-height: 14px;
+	display: inline-block;
+	width: 100%;
+	margin-top: 5px;
+	text-align: center;
+	font-family: 'VW Head';
+	font-weight: bold;
+	font-size: 12px;
+}
+.vw5-themeMenuMain__moreMenuItem:before {
+	content: "\e94c";
+	display: inline-block;
+	font-family: "iconFont";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-decoration: inherit;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-size: 65px;
+	line-height: 20px;
+	vertical-align: bottom;
+}
+#menu-toggle {
+	padding-top: 2em;
+}
+.last-menu-button {
+	position: sticky;
+	bottom: 0px;
+	background: #fff;
+}
+.shadow {
+	box-shadow: rgba(0,0,0,0.07) 10px 0px 10px;
+}
+.secondary-main-menu {
+	-webkit-transition-property: left;
+	transition-property: left;
+	-webkit-transition-duration: 0.25s;
+	transition-duration: 0.25s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	box-sizing: border-box;
+	padding: 50px 20px 0;
+	background: #fff;
+	background: #fff;
+	position: fixed;
+	height: 100%;
+	height: 100vh;
+	width: 245px;
+	left: -149px;
+	z-index: 1;
+	overflow-y: hidden;
+	overflow-x: hidden;
+}
+
+/**MENU INTERNO**/
+#mainNav {
+	padding: 8px 60px;
+	margin: 0;
+}
+.bg-photo {
+	background: url("//awscdn.volkswagen.co/media/Theme_Stage_Editorial_Image_Component/20907-stage-child-image/dh-1024-05dd08/2fdca99b/1492778734/order-approval-with-customer-at-tablet.jpg") transparent;
+	background-size: cover;
+}
+/*header > .container, nav  > .container, section  > .container, footer  .container{
+    padding-left: 8em !important;
+}*/
+.bg-photo-tb {
+	background: url("../../img/volkswagen/banner-campana-seguridad-servicion-tyb-2.jpg") transparent;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size:cover;
+	height:auto;
+	padding: 18% 20% !important;
+}
+
+.bg-grey {
+	background-color: #bdc3c6 !important;
+}
+.headline-title {
+	margin-bottom: 80px;
+	background: #F3F5F6;
+	padding: 60px 0;
+}
+.headline-title h2 {
+	padding: 0 60px;
+	font-size: 45px;
+	line-height: 50px;
+	color: #000;
+	text-align: center;
+}
+/**LATE CHANGES**/
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+.titlewhite{
+    color:#fff !important;
+}
+ul.vw5-themeMenuMain__menu li.logo-wrapper.vwtb-logo {
+    padding: 0 0 125px 0  !important;;
+}
+
+#navbarResponsive > ul > li  > a{    font-family:'VW Head', Arial, Helvetica, sans-serif !important;
+    color: #000;}
+    
+    .mdi:before, .mdi-set {
+    display: inline-block;
+    font: normal normal normal 24px/1 "Material Design Icons" !important;
+    color: #808890 !important;
+    width: 100% !important;
+    font-size: 24px !important;
+}
+i.mdi > span{
+    width:100%;
+    color: #808890;
+    line-height: 14px;
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+    font-family: 'VW Head';
+    font-weight: bold;
+    font-size: 12px;
+    font-style: normal;
+}
+ li:nth-child(6) > a > i.mdi > span{
+    margin-left: -1em;
+    margin-right: 0px !important;
+    float: left;
+}
+/*Iconos para WV TYB*/
+    .mdi:before, .mdi-set {
+    display: inline-block;
+    font: normal normal normal 24px/1 "Material Design Icons";
+    font-size: inherit;
+    text-rendering: auto;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.mdi-truck:before {
+    content: "\F53D";
+}
+.mdi-message-processing:before {
+    content: "\F366";
+}
+.mdi-wrench:before {
+    content: "\F5B7";
+}
+.mdi-account-multiple:before {
+    content: "\F00E";
+}
+.mdi-map-marker:before {
+    content: "\F34E";
+}
+/**BODY**/
+
+.innerContent {
+	margin-left: 60px;
+	margin-right: 60px;
+	font-family: 'VW Text', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+.btn.btn-Volkswagenbtn {
+	font-family: 'VW Text', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+
+#results > div > div > div > div > p:nth-child(2) {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 1em;
+}
+
+section {
+	padding: 0 60px !important;
+	font-family: 'VW Text', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
+.bg-grey2 {
+	background: #f1f2f4;
+	padding-top: 30px;
+}
+.disclaimer p {
+	color: #808890;
+	font-size: 11px;
+	line-height: 16px;
+}
+#collapsePolitics > p > a {
+	color: #0099da;
+}
+.btn.btn-Volkswagenbtn {
+	color: #555;
+	font-weight: bold;
+	margin-bottom: 1em;
+	background: url(../../img/volkswagen/right-arrow.png) no-repeat;
+	padding: 0px 24px;
+	font-size: 18px;
+}
+.collapse.in.show {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 0.75em;
+	margin-bottom: 1em;
+}
+.row.vin-holder {
+	margin: 2em;
+}
+#search-vin {
+	background: #F3F5F6;
+	padding: 1em 2em;
+	margin-top: 15%;
+}
+#vines {
+height: 42px;
+    padding: 0 15px;
+    font-size: 14px;
+    width: 100% !important;
+    line-height: 22px;
+    border-radius: 4px;
+    color: #2f3538;
+    border: 1px solid #dee1e3;
+    
+}
+.ico-mglass{
+    position: absolute;
+    z-index: 9999;
+    font-size: 20px;
+    top: 10px;
+    color: #cecece;
+    right: 10px;
+}
+.searchbtn2 {
+    float: right;
+    border: transparent;
+    background: transparent;
+}
+.filter--field-container{width:100%;}
+.input-group-btn {
+	visibility: hidden;
+	display: none;
+}
+.resultados {
+	margin-bottom: 5%;
+}
+.resultados .msg-error{	background: #F3F5F6;
+	padding: 1em 2em;}
+.resultados .btn, #results > div:nth-child(1) > div > div > div > a {
+	font-family: 'VW Text', Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: bold;
+	padding: 10px 12px !important;
+}
+.card-text p, .habeasdata {
+	font-size: 16px;
+	line-height: 25px;
+	font-family: 'VW Text', Arial, Helvetica, sans-serif;
+	font-weight:300;
+}
+.panel-heading {
+    padding: 10px 15px;
+    border: 1px solid transparent;
+}
+.panel-collapse {
+    padding: 2em 2em;
+}
+.panel-default>.panel-heading {
+    color: #333;
+    float: left;
+    margin-bottom: 1em;
+    width: 100%;
+}
+.panel-title>a {
+    color: inherit;
+    width: 100%;
+    float: left;
+    padding: 5px;
+        font-size: 21px;
+    font-weight: bold;
+}
+/**FOOTER**/
+
+.bttop {
+	margin: 0;
+	padding: 0 !important;
+}
+#page-top > section.bttop > div > a > p {
+	background: #dee1e3;
+	text-align: right;
+	padding: 0px;
+	margin: -32px 0 0 0;
+	padding-right: 50px;
+}
+.jumpToTop {
+	right: 50px;
+	line-height: 32px;
+	color: #2f3538;
+	font-family: 'VW Text Light', Arial, Helvetica, sans-serif;
+}
+.jumpToTop:before {
+	content: "\e906";
+	display: inline-block;
+	font-family: "iconFont";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-decoration: inherit;
+	text-rendering: optimizeLegibility;
+	text-transform: none;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-size: 24px;
+	vertical-align: middle;
+	width: 9px;
+}
+.container.copyright {
+    font-family: 'VW Text Light', Arial, Helvetica, sans-serif;
+    margin-bottom: 13em;
+    margin-top: 2em;
+    font-weight: 100 !important;
+    font-size: 12px;
+    margin-left: 2em;
+}
+.disclaimer p {
+	font-family: 'VW Text', Arial, Helvetica, sans-serif;
+	padding-bottom: 50px;
+}
+/**FOOTER SOCIALS**/
+
+.vw5-themeIconImageIcon:after {
+	content: "";
+	display: table;
+	clear: both
+}
+.vw5-themeIconImageIcon {
+	position: relative;
+	width: 25px;
+	height: 25px
+}
+.vw5-themeIconImageIcon > div {
+	height: 25px;
+	width: 25px;
+	vertical-align: middle
+}
+.vw5-themeIconImageIcon img {
+	border: none
+}
+.vw5-themeIconImageIcon__active, .vw5-themeIconImageIcon__inactive {
+	width: 25px;
+	height: 50px;
+	line-height: 50px;
+	display: inline-block;
+	vertical-align: top
+}
+.vw5-themeIconImageIcon__active {
+	opacity: 0;
+}
+.vw5-themeIconImageIcon__inactive {
+	opacity: 1;
+}
+.vw5-themeIconImageIcon:hover .vw5-themeIconImageIcon__active {
+	opacity: 1;
+	margin-top: -52px
+}
+.vw5-themeIconImageIcon:hover .vw5-themeIconImageIcon__inactive {
+	opacity: 0;
+}
+.vw5-themeIconImageIconInactiveIcon:after {
+	content: "";
+	display: table;
+	clear: both
+}
+
+.vw5-themeIconImageIconInactiveIcon {
+	display: block;
+	margin: 0px;
+	opacity: 0.3;
+}
+.vw5-themeIconImageIconInactiveIcon .vw5-themeIconImageIconInactiveIcon__outerContainer {
+	display: block;
+}
+.vw5-themeIconImageIconInactiveIcon .vw5-themeIconImageIconInactiveIcon__container {
+	height: 0;
+	position: relative;
+	overflow: hidden;
+	display: block;
+}
+.vw5-themeIconImageIconInactiveIcon img {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	border: none;
+}
+.vw5-themeIconImageIconActiveIcon:after {
+	content: "";
+	display: table;
+	clear: both
+}
+
+.vw5-themeIconImageIconActiveIcon {
+	display: block;
+	margin: 0px;
+}
+.vw5-themeIconImageIconActiveIcon .vw5-themeIconImageIconActiveIcon__outerContainer {
+	display: block;
+}
+.vw5-themeIconImageIconActiveIcon .vw5-themeIconImageIconActiveIcon__container {
+	height: 0;
+	position: relative;
+	overflow: hidden;
+	display: block;
+}
+.vw5-themeIconImageIconActiveIcon img {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0px;
+	left: 0;
+	border: none;
+}
+.backtop {
+	margin-left: 1em;
+	margin-top: -2px;
+}
+.container.habeasdata{
+    margin-bottom: 2em;
+}
+/*
+.container {
+    max-width: 1440px !important;
+    width: 1440px !important;
+}*/
+
+.vw5-themeMenuMain__item a .menuItemText, .vw5-themeMenuMain__moreMenuItem a .menuItemText {
+    display: inline-block;
+    width: 100%;
+    margin-top: 8px  !important;
+    text-align: center;
+    line-height: 14px  !important;
+}
+.container.copyright {
+    font-family: 'VW Text Light', Arial, Helvetica, sans-serif;
+    margin-bottom: 13em;
+    margin-top: 2em;
+    font-weight: 100 !important;
+    font-size: 12px;
+    margin-left: 15em;
+    padding-left: 0px !important;
+}
+
+.vw5-themeMenuMain__moreMenuItem--visible.last-menu-button {
+    position: fixed;
+    bottom: 0px;
+    height: 90px;
+    width: 95px;
+    padding: 20px;
+    border-top: 1px solid #dee1e3;
+    color: #808890;
+    font-family: 'VW Head';
+    font-weight: bold;
+    font-size: 12px;
+}
+.vw5-themeMenuMain__moreMenuItem--visible.last-menu-button:before {
+content: "\e94c";
+    display: block;
+    font-family: "iconFont";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: 65px;
+    line-height: 20px;
+    vertical-align: bottom;
+    text-align: left;
+    left: -5px;
+    position: relative;
+        color: #808890;
+}
+/**MENU LAT FIX**/
+/*
+ul.vw5-themeMenuMain__menu li {
+    list-style-type: none !important;
+    list-style-image: none !important;
+    margin-bottom: 0px;
+    padding: 20% 10px 0 10px;
+    color: #2f3538;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dee1e3;
+    text-align: center;
+    height: 90px;
+}
+
+.last-menu-button {
+    position: sticky;
+    bottom: 0px;
+    background: #fff;
+}*/
+/**TOGGLE SIDEBAR***/
+
+/* The sidepanel menu */
+/* The sidepanel menu */
+.sidepanel {
+    height: 250px;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    margin-left: 96px;
+    height: 100%;
+    box-shadow: 0px 0px 10px #777;
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+    background-color:#fff;
+}
+
+.openbtn:hover {
+  background-color:#fff;
+}
+
+.sidepanel li a span.vw5-icon{
+    margin-right: auto;
+    color: #808890;
+    display: block;
+    height: 25px;
+    float: left;
+    margin-left: 25px;
+    margin-right: 10px;
+}
+
+.sidepanel li a span.vw5-icon:before {
+    font-size: 20px;
+}
+.sidepanel li .menuItemText {
+display: inline-block;
+    width: auto;
+    margin-top: 8px !important;
+    text-align: center;
+    line-height: 14px !important;
+    float: left;
+}
+.sidepanel li{
+list-style: none;
+    vertical-align: middle;
+    display: block;
+    width: 100%;
+    padding: 13px 10px;
+    clear: both;
+    height: 50px;
+}
+#mySidepanel > div.vw5-kwfField.vw5-kwfFormFieldTextField.vw5-kwcLabelPositionLeft.vw5-query > div > input[type=text]{
+    width: 90%;
+    padding-left: 40px;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: 'VW Text', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: #bdc3c6 !important;
+    margin: 0;
+    padding: 10px 10px 10px 40px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: auto auto 30px 0.75em;
+}
+.vw5-submit.vw5-themeFulltextSearchSearchViewSearchForm__submit {
+ /*content: "\e96a";*/
+    display: inline-block;
+    line-height: 40px;
+    font-size: 20px;
+    font-family: "iconFont";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    color: #808890;
+    z-index: 1;
+    background: transparent;
+    border: none;
+    position: absolute;
+    background: url(https://campanas-servicio.co/frontend/img/volkswagen/icon-lupa.png) no-repeat 50% 50%;
+    color: transparent;
+}
+
+/**RESPONSIVED**/
+@media all and (min-width: 1025px) and (max-width:1290px){
+    
+    #results .container {
+    max-width: 1200px !important;
+    width: 1200px !important;
+}
+
+header > .container, nav > .container, section > .container, footer .container {
+    padding-left: 8em !important;
+}
+    .container.copyright {
+    font-family: 'VW Text Light', Arial, Helvetica, sans-serif;
+    margin-bottom: 13em;
+    margin-top: 2em;
+    font-weight: 100 !important;
+    font-size: 12px;
+    margin-left: 10em;
+    padding-left: 0px !important;
+}
+}
+
+

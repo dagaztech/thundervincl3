@@ -1,0 +1,11 @@
+
+[37;41m                                                                  [39;49m
+[37;41m  [Symfony\Component\Console\Exception\CommandNotFoundException]  [39;49m
+[37;41m  Command "cache" is not defined.                                 [39;49m
+[37;41m  Did you mean one of these?                                      [39;49m
+[37;41m      cache:clear                                                 [39;49m
+[37;41m      cache:table                                                 [39;49m
+[37;41m      route:cache                                                 [39;49m
+[37;41m      config:cache                                                [39;49m
+[37;41m                                                                  [39;49m
+

@@ -1,0 +1,450 @@
+/*!
+ * Start Bootstrap - Landing Page v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/landing-page)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
+ */
+
+
+/**FONTS**/
+@font-face {
+	font-family: 'FranklinGothic-DemiCond';
+	src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/franklin/FranklinGothic-DemiCond.eot?#iefix') format('embedded-opentype'), 
+	url('https://www.manchile.cl/wp-content/themes/camiones/fonts/franklin/FranklinGothic-DemiCond.woff') format('woff'),
+	url('https://www.manchile.cl/wp-content/themes/camiones/fonts/franklin/FranklinGothic-DemiCond.ttf')  format('truetype'),
+	url('https://www.manchile.cl/wp-content/themes/camiones/fonts/franklin/FranklinGothic-DemiCond.svg#FranklinGothic-DemiCond') format('svg');
+	font-weight: normal;
+	font-style: normal;
+  }
+  @font-face {
+	  font-family: 'volkswagenheadlineregular';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vw_headline-webfont.woff2') format('woff2'),
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vw_headline-webfont.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+  
+  }
+  @font-face {
+	  font-family: 'vw_headbold';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwhead-bold_1-webfont.woff2') format('woff2'),
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwhead-bold_1-webfont.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+  
+  }
+  @font-face {
+	  font-family: 'vw_headbold_italic';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwhead-bolditalic-webfont.woff2') format('woff2'),
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwhead-bolditalic-webfont.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+  
+  }
+  
+  @font-face {
+	  font-family: 'vw_headextrabold';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwhead-extrabold_1-webfont.woff2') format('woff2'),
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwhead-extrabold_1-webfont.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+  
+  }
+  @font-face {
+	  font-family: 'vw_headline_otblack';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwheadlineot-black-webfont.woff2') format('woff2'),
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwheadlineot-black-webfont.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+  
+  }
+  @font-face {
+	  font-family: 'vw_headline_otbook';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwheadlineot-book-webfont.woff2') format('woff2'),
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwheadlineot-book-webfont.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+  
+  }
+  
+  @font-face {
+	  font-family: 'vw_headline_otsemibold';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwheadlineot-semibold-webfont.woff2') format('woff2'),
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwheadlineot-semibold-webfont.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+  
+  }
+  @font-face {
+	  font-family: 'vw_headregular';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwhead-regular_1-webfont.woff2') format('woff2'),
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwhead-regular_1-webfont.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+  
+  }
+  @font-face {
+	  font-family: 'vw_textbold';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwtext-bold-webfont.woff2') format('woff2'),
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwtext-bold-webfont.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+  
+  }
+  @font-face {
+	  font-family: 'vw_textlight';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwtext-light_1-webfont.woff2') format('woff2'),
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwtext-light_1-webfont.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+  
+  }
+  @font-face {
+	  font-family: 'vw_textregular';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwtext-regular_1-webfont.woff2') format('woff2'),
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/volkswagen/vwtext-regular_1-webfont.woff') format('woff');
+	  font-weight: normal;
+	  font-style: normal;
+  
+  }
+  @font-face {
+	  font-family: 'OpenSansLight';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Light-webfont.eot');
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Light-webfont.eot?#iefix') format('embedded-opentype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Light-webfont.woff') format('woff'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Light-webfont.ttf') format('truetype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Light-webfont.svg#OpenSansLight') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+  @font-face {
+	  font-family: 'OpenSansLightItalic';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-LightItalic-webfont.eot');
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-LightItalic-webfont.eot?#iefix') format('embedded-opentype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-LightItalic-webfont.woff') format('woff'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-LightItalic-webfont.ttf') format('truetype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-LightItalic-webfont.svg#OpenSansLightItalic') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+  @font-face {
+	  font-family: 'OpenSansRegular';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Regular-webfont.eot');
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Regular-webfont.eot?#iefix') format('embedded-opentype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Regular-webfont.woff') format('woff'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Regular-webfont.ttf') format('truetype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Regular-webfont.svg#OpenSansRegular') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+  @font-face {
+	  font-family: 'OpenSansItalic';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Italic-webfont.eot');
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Italic-webfont.eot?#iefix') format('embedded-opentype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Italic-webfont.woff') format('woff'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Italic-webfont.ttf') format('truetype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Italic-webfont.svg#OpenSansItalic') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+  @font-face {
+	  font-family: 'OpenSansSemibold';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Semibold-webfont.eot');
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Semibold-webfont.eot?#iefix') format('embedded-opentype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Semibold-webfont.woff') format('woff'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Semibold-webfont.ttf') format('truetype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+  @font-face {
+	  font-family: 'OpenSansSemiboldItalic';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-SemiboldItalic-webfont.eot');
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-SemiboldItalic-webfont.woff') format('woff'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-SemiboldItalic-webfont.ttf') format('truetype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-SemiboldItalic-webfont.svg#OpenSansSemiboldItalic') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+  @font-face {
+	  font-family: 'OpenSansBold';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Bold-webfont.eot');
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Bold-webfont.eot?#iefix') format('embedded-opentype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Bold-webfont.woff') format('woff'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Bold-webfont.ttf') format('truetype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-Bold-webfont.svg#OpenSansBold') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+  @font-face {
+	  font-family: 'OpenSansBoldItalic';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-BoldItalic-webfont.eot');
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-BoldItalic-webfont.woff') format('woff'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-BoldItalic-webfont.ttf') format('truetype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-BoldItalic-webfont.svg#OpenSansBoldItalic') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+  @font-face {
+	  font-family: 'OpenSansExtrabold';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-ExtraBold-webfont.eot');
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-ExtraBold-webfont.woff') format('woff'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-ExtraBold-webfont.ttf') format('truetype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-ExtraBold-webfont.svg#OpenSansExtrabold') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+  @font-face {
+	  font-family: 'OpenSansExtraboldItalic';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-ExtraBoldItalic-webfont.eot');
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-ExtraBoldItalic-webfont.woff') format('woff'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-ExtraBoldItalic-webfont.ttf') format('truetype'), 
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-ExtraBoldItalic-webfont.svg#OpenSansExtraboldItalic') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+  @font-face {
+	  font-family: 'OpenSansCondensedLight';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondLight-webfont.eot');
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondLight-webfont.eot?#iefix') format('embedded-opentype'),  
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondLight-webfont.woff') format('woff'),  
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondLight-webfont.ttf') format('truetype'),  
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondLight-webfont.svg#OpenSansCondensedLight') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+  @font-face {
+	  font-family: 'OpenSansCondensedLightItalic';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondLightItalic-webfont.eot');
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondLightItalic-webfont.eot?#iefix') format('embedded-opentype'),  
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondLightItalic-webfont.woff') format('woff'),  
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondLightItalic-webfont.ttf') format('truetype'),  
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondLightItalic-webfont.svg#OpenSansCondensedLightItalic') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+  @font-face {
+	  font-family: 'OpenSansCondensedBold';
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondBold-webfont.eot');
+	  src: url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondBold-webfont.eot?#iefix') format('embedded-opentype'),  
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondBold-webfont.woff') format('woff'),  
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondBold-webfont.ttf') format('truetype'),  
+		   url('https://www.manchile.cl/wp-content/themes/camiones/fonts/OpenSans/-CondBold-webfont.svg#OpenSansCondensedBold') format('svg');
+	  font-weight: normal;
+	  font-style: normal;
+  }
+  
+  /**END OF FONTS**/
+  
+  html,
+  body,
+  form,
+  fieldset,
+  p,
+  div,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	  -webkit-text-size-adjust: none
+  }
+  
+  
+  
+  /*BASE*/
+  
+  body {
+	  font-family: "FranklinGothic-DemiCond", Arial, sans-serif;
+	  font-size: 14px;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+	  font-family: 'FranklinGothic-DemiCond', Arial, sans-serif;
+	  font-weight: 700;
+  }
+  
+  .wrapper {
+	  max-width: 1275px;
+	  margin: 0px auto;
+  }
+  
+  .affix {
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  width: 900px;
+	  margin: 0 auto;
+	  z-index: 9999 !important;
+  }
+  
+  .affix+.container-fluid {
+	  padding-top: 70px;
+  }
+  
+  footer.footer {
+	  padding-top: 4rem;
+	  padding-bottom: 4rem
+  }
+  
+  body>section>div.row {
+	  padding: 0;
+  }
+  
+  
+  /**2021 ADDONS**/
+  
+  body.man-body{
+		  background-color: #ffffff !important;
+  }
+  .carousel-inner{
+	  background: #FFF;
+  }
+  h1, h2 {
+	  color: #303c48;
+	  font-family: FranklinGothic-DemiCond;
+	  font-size: 28px;
+	  margin-top: 0px;
+	  margin-bottom: 17px;
+  }
+  #vines {
+width: 100%;
+    font-size: 18px;
+    background: #f4f5f773;
+    border: 0;
+    border-bottom: 1px solid #d0d3d4;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #000000;
+    border-top: none !important;
+    border-radius: 4px;
+    margin-bottom: 1em;
+    box-shadow: none;
+    height: 40px;
+    font-family: 'FranklinGothic-DemiCond', Arial, sans-serif !important;
+  }
+  
+  .panel-default>.panel-heading {
+	  color: #333;
+	  background-color: #f5f5f5;
+	  border-color: #ddd;
+	  padding: 0;
+	  float: left;
+	  margin-bottom: 1em;
+	  width: 100%;
+  }
+  
+  .panel-title>a {
+	  width: 100% !important;
+	  float: left !important;
+	  padding: 1em;
+  }
+  
+  .collapse.in.show {
+	  padding: 1em;
+	  margin-bottom: 0;
+	  text-align: left;
+  }
+  
+  .pre-accordion {
+	  width: 100%;
+	  text-align: center;
+	  color: #000;
+	  font-size: 1.15em;
+	  margin-bottom: 1em;
+  }
+  
+  #search-vin h2 {
+	  text-transform: uppercase;
+	  color: black;
+	  font-weight: normal;
+	  font-family: 'FranklinGothic-DemiCond', Helvetica Neue, Arial, sans-serif;
+  }
+  
+  img.front-property-card {
+	  width: 100% !important;
+  }
+  
+  .h1,
+  .h2,
+  .h3,
+  h1,
+  h2,
+  h3 {
+	  font-family: 'FranklinGothic-DemiCond', Helvetica Neue, Arial, sans-serif;
+  }
+  
+  h3 {
+	  font-family: 'FranklinGothic-DemiCond', Helvetica Neue, Arial, sans-serif !important;
+	  margin-top: 20px;
+	  margin-bottom: 20px !important;
+  }
+  
+  p {
+	  font-family: 'FranklinGothic-DemiCond', Helvetica Neue, Arial, sans-serif;
+	  font-size: 14px;
+	  color: #000;
+  }
+  #collapsePolitics a {
+	  color: #e40045;
+  }
+  .btn.btn-manbtn {
+	  color: #fff;
+	  background-color: #e40045;
+	  padding: 10px 20px;
+	  border-radius: 5px;
+	  margin-top: 0;
+	  display: inline-block;
+	  font-family: 'FranklinGothic-DemiCond', Helvetica Neue, Arial, sans-serif;
+	  margin-bottom: 1em;
+  }
+  
+  .btn.focus,
+  .btn:focus {
+	  outline: none !important;
+  }
+  
+  #habeasdater {
+	  font-weight: 500 !important;
+	  font-family: 'FranklinGothic-DemiCond', Helvetica Neue, Arial, sans-serif !important;
+  }
+  
+  
+  .carousel-control-next, .carousel-control-prev{
+	  background-color: #e40045;
+	  height: 100px;
+	  width: 35px;
+	  margin-top: 25%;
+	  opacity: 1;
+  }
+  .carousel-control-prev{border-radius: 0 10px 10px 0;}
+  .carousel-control-next{border-radius:10px 0 0 10px}
+  
+  
+  
+  #vinx{
+	  margin-bottom: 5em;
+  }
+  
+  .input-group-btn.btnmann{
+	  float: left;
+  }
+  
+  .btn.searchbtn2.btn-manbtn{
+	  border-radius:10px !important;
+  }
+  
+  #button-data.msg-ok{
+          margin-top: 1em  !important;
+          display:block !important;
+  }

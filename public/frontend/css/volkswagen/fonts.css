@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'vw-head-regular';
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/vwhead-regular.woff2') format('woff2'),
+      url('fonts/vwhead-regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'vw-head-bold';
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/vwhead-bold.woff2') format('woff2'),
+      url('fonts/vwhead-bold.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'vw-head-light';
+    font-weight: 200;
+    font-display: swap;
+    src: url('fonts/vwhead-light.woff2') format('woff2'),
+      url('fonts/vwhead-light.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'vw-text-regular';
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/vwtext-regular.woff2') format('woff2'),
+      url('fonts/vwtext-regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'vw-text-bold';
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/vwtext-bold.woff2') format('woff2'),
+      url('fonts/vwtext-bold.woff') format('woff');
+  }

@@ -1,0 +1,70 @@
+/**RESPONSIVE MAX 640**/
+@media all and (max-width: 640px) {
+	
+}
+/**RESPONSIVE MIN 768**/
+@media all and (min-width: 768px) {
+	
+}
+@media all and (min-width:1025px) and (max-width:1290px){
+    .searchiotem img {
+    height: 30px;
+    width: auto;
+    margin-top: 0;
+    margin-right: -10px;
+    padding-left: 10px;
+    margin-top:15px;
+}
+  .menu-top.col-lg-6.col-md-7 {
+position: absolute;
+    right: 20px;
+    top: 15px;
+        z-index: 99;
+}
+
+.menu-top.col-lg-4.col-md-7{
+    position: absolute;
+    right: 40px;
+    padding-top: 0;
+    margin-top: 0;
+    height: auto;
+    margin-bottom: 0px;
+        top: 5px;
+}
+
+.menu-top.col-lg-4.col-md-7 .navbar-nav>li {
+float: left;
+    padding: 0px;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+}
+.searchiotem {
+    height: 60px;
+}
+
+#navbarResponsive > div.menu-top.col-lg-4.col-md-7 > ul > li:nth-child(3){
+    margin-right:10px;
+}
+#modelos-submenu > div {
+    left: -44em !important;
+        width: 1280px;
+}
+#quieroseat-submenu > div{
+    left: -52em !important;
+        width: 1280px;
+}
+#posventa-submenu > div{
+    left: -63em !important;
+        width: 1280px;
+}
+#sobreseat-submenu > div{
+    left: -75em !important;
+        width: 1280px;
+}
+
+#navbarResponsive > div.menu-top.col-lg-4.col-md-7 > ul > li.nav-item.searchiotem {
+    height: 60px;
+}
+
+}
