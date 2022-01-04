@@ -76,7 +76,7 @@ class DetalleCampana extends Model implements LogsActivityInterface
 
 
     //public $table = 'detalle_campanas';
-    public $table = 'v_historicogral';
+    public $table = 'vins';
 
     
 
@@ -106,14 +106,23 @@ class DetalleCampana extends Model implements LogsActivityInterface
         'info_adicional', 
         'estado',
         'created_at',
-        'updated_at',
+        'updated_at'
+
+                /*'campana',
         'vin',
         'importer_dealer',
         'vendedor',
         'criterio',
         'fecha_ejecucion_campana',
+        'labour',
+        'parts',
+        'count',
+        'codigo_borrado',
+        'column9',
+        'column10',
+        'column12',
         'dealer_que_ejecuta_campana',
-        'importer_ejecuta'
+        'importer_ejecuta'*/
 
     ];
 

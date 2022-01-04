@@ -285,35 +285,6 @@ class DetalleCampanaController extends Controller
 
         $data = $request->all();
 
-        if(empty($data['vines'])){
-
-            $data['vines'] = null;
-
-        }
-
-        if(empty($data['vendedor'])){
-
-            $data['vendedor'] = null;
-
-        }
-
-        if(empty($data['ano'])){
-
-            $data['ano'] = null;
-
-        }
-
-        if(empty($data['modelo'])){
-
-            $data['modelo'] = null;
-
-        }
-
-        if(empty($data['ciudad'])){
-
-            $data['ciudad'] = null;
-
-        }
         if(empty($data['fecha_ejecucion_campana'])){
 
             $data['fecha_ejecucion_campana'] = null;
@@ -352,14 +323,11 @@ class DetalleCampanaController extends Controller
 
         
 
-
-        
-
         $detallecampana = $this->detalleCampanaRepository->update($data, $id);
 
 
 
-        Flash::success('Detalle de Campaña actualizado exitosamente.');
+        Flash::success('Detalle de Camapaña actualizado exitosamente.');
 
 
 
@@ -450,11 +418,11 @@ class DetalleCampanaController extends Controller
 
         Excel::create('Historial -'.$marca->nombre, function($excel) use ($marca, $campana){
             $excel->sheet('Estado de Campaña', function($sheet) use ($marca, $campana) {
-                if($campana != ""){
-					$historiales = DetalleCampana::select('marcas.codigo as marca', 'campana', 'vin', 'importer_dealer', 'vendedor', 'fecha_ejecucion_campana', 'dealer_que_ejecuta_campana',  'estado', 'atendido', 'v_historicogral.nombre', 'descripcion', 'lineas_afectadas_por_campanas', 'fecha_inicio_campana', 'modelos_vehiculos_afectados', 'info_adicional', 'v_historicogral.created_at', 'v_historicogral.updated_at')->join('marcas','marcas.id','marca_id')->where('marca_id', $marca->id)->where('campana', $campana)->get()->toArray();
+				if($campana != ""){
+					$historiales = DetalleCampana::select('marcas.codigo as marca', 'campana', 'atendido', 'nombre', 'descripcion', 'lineas_afectadas_por_campanas', 'fecha_inicio_campana', 'modelos_vehiculos_afectados', 'info_adicional', 'estado')->join('marcas','marcas.id','marca_id')->where('marca_id', $marca->id)->where('campana', $campana)->get()->toArray();
 				}
 				else{
-					$historiales = DetalleCampana::select('marcas.codigo as marca', 'campana', 'vin', 'importer_dealer', 'vendedor', 'fecha_ejecucion_campana', 'dealer_que_ejecuta_campana',  'estado', 'atendido', 'v_historicogral.nombre', 'descripcion', 'lineas_afectadas_por_campanas', 'fecha_inicio_campana', 'modelos_vehiculos_afectados', 'info_adicional', 'v_historicogral.created_at', 'v_historicogral.updated_at')->join('marcas','marcas.id','marca_id')->where('marca_id', $marca->id)->get()->toArray();
+					$historiales = DetalleCampana::select('marcas.codigo as marca', 'campana', 'atendido', 'nombre', 'descripcion', 'lineas_afectadas_por_campanas', 'fecha_inicio_campana', 'modelos_vehiculos_afectados', 'info_adicional', 'estado')->join('marcas','marcas.id','marca_id')->where('marca_id', $marca->id)->get()->toArray();
 				}
 				if(count($historiales) > 0){
 					$datos = array();

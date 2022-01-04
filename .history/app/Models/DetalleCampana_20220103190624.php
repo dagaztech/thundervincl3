@@ -62,8 +62,6 @@ use Spatie\Activitylog\LogsActivity;
  * @property string modelos_vehiculos_afectados
  * @property string info_adicional
  * @property string estado
- * @property date created_at
- * @property date updated_at
 
  */
 
@@ -75,8 +73,7 @@ class DetalleCampana extends Model implements LogsActivityInterface
 
 
 
-    //public $table = 'detalle_campanas';
-    public $table = 'v_historicogral';
+    public $table = 'detalle_campanas';
 
     
 
@@ -91,6 +88,22 @@ class DetalleCampana extends Model implements LogsActivityInterface
     public $fillable = [
         'vin_id',
         'marca_id',
+        /*'campana',
+        'vin',
+        'importer_dealer',
+        'vendedor',
+        'criterio',
+        'fecha_ejecucion_campana',
+        'labour',
+        'parts',
+        'count',
+        'codigo_borrado',
+        'column9',
+        'column10',
+        'column12',
+        'dealer_que_ejecuta_campana',
+        'importer_ejecuta'*/
+
         'vines',
         'campana', 
         'vendedor',
@@ -104,17 +117,7 @@ class DetalleCampana extends Model implements LogsActivityInterface
         'fecha_inicio_campana', 
         'modelos_vehiculos_afectados', 
         'info_adicional', 
-        'estado',
-        'created_at',
-        'updated_at',
-        'vin',
-        'importer_dealer',
-        'vendedor',
-        'criterio',
-        'fecha_ejecucion_campana',
-        'dealer_que_ejecuta_campana',
-        'importer_ejecuta'
-
+        'estado'
     ];
 
 

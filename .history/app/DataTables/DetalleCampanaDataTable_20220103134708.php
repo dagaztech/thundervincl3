@@ -66,21 +66,18 @@ class DetalleCampanaDataTable extends DataTable
 
         if(!empty($key)){
 
-           //$detalle_campanas = DetalleCampana::query()->where('detalle_campanas.marca_id', $key)->with('marca', 'vins')->orderBy('detalle_campanas.id','desc');
-           $detalle_campanas = DetalleCampana::query()-> where('vins.marca_id', $key)->with('marca_id', 'vins')->orderBy('vins.id','desc');
+            $detalle_campanas = DetalleCampana::query()->where('detalle_campanas.marca_id', $key)->with('marca', 'vins')->orderBy('detalle_campanas.id','desc');
+            $estado_campanas = EstadoCampana::query()->where('vins.marca_id', $key)->with('marca', 'vins')->orderBy('vins.id','desc');
 
         }else{
 
-           // $detalle_campanas = DetalleCampana::query()->with('marca', 'vins')->orderBy('detalle_campanas.id','desc'); 
-            $detalle_campanas = DetalleCampana::query()->with('marca_id', 'vins')->orderBy('vins.id','desc'); 
+            $detalle_campanas = DetalleCampana::query()->with('marca', 'vins')->orderBy('detalle_campanas.id','desc'); 
+            $estado_campanas = EstadoCampana::query()->with('marca', 'vins')->orderBy('vins.id','desc'); 
 
         }
 
 
-
-
-
-        return $this->applyScopes($detalle_campanas);
+        return $this->applyScopes($detalle_campanas && $estado_campanas);
 
     }
 
@@ -170,37 +167,9 @@ class DetalleCampanaDataTable extends DataTable
 
         return [
 
-          'marca' => ['name' => 'marca_id', 'data' => 'marca.nombre'],
+            'marca' => ['name' => 'marca_id', 'data' => 'marca.nombre'],
 
-            'vines' => ['name' => 'Si registra vines', 'data' => 'vines'],
-
-            'campana' => ['name' => 'Campaña', 'data' => 'campana'],
-
-            'vendedor' => ['name' => 'Vendedor', 'data' => 'vendedor'],
-
-            'ano' => ['name' => 'Año', 'data' => 'ano'],
-
-            'modelo' => ['name' => 'Modelo', 'data' => 'modelo'],
-
-            'ciudad' => ['name' => 'Ciudad', 'data' => 'campana'],
-
-            'atendido' => ['name' => 'Atendido', 'data' => 'atendido'],
-
-            'nombre' => ['name' => 'Nombre de Campaña', 'data' => 'nombre'],
-
-            'descripcion' => ['name' => 'Descripción', 'data' => 'descripcion'],
-
-            'lineas_afectadas_por_campanas' => ['name' => 'Lineas afectadas por campañas', 'data' => 'lineas_afectadas_por_campanas'],
-
-            'fecha_inicio_campana' => ['name' => 'Fecha inicio campaña', 'data' => 'fecha_inicio_campana'],
-
-            'modelos_vehiculos_afectados' => ['name' => 'Modelos vehiculos afectados', 'data' => 'modelos_vehiculos_afectados'],
-
-            'info_adicional' => ['name' => 'Información adicional', 'data' => 'info_adicional'],
-
-            'created_at' => ['name' => 'Creado en', 'data' => 'created_at'],
-
-            'updated_at' => ['name' => 'Actualizado en', 'data' => 'updated_at'],
+            'campa&ntilde;a' => ['name' => 'campana', 'data' => 'campana'],
 
             'vines_asociados' => ['name' => 'vin', 'data' => 'vin'],
 
@@ -222,9 +191,9 @@ class DetalleCampanaDataTable extends DataTable
 
             'importador_2' => ['name' => 'dealer_que_ejecuta_campana', 'data' => 'dealer_que_ejecuta_campana'],
 
-           // 'ejecutor' => ['name' => 'importer_ejecuta', 'data' => 'importer_ejecuta'],
+            'ejecutor' => ['name' => 'importer_ejecuta', 'data' => 'importer_ejecuta'],
 
-            'estado' => ['name' => 'Estados: 1=Activa | 0=Inactiva', 'data' => 'estado'],
+            'estado' => ['name' => 'estado', 'data' => 'estado'],
 
         ];
 

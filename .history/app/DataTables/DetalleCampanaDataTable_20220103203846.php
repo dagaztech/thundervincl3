@@ -202,6 +202,12 @@ class DetalleCampanaDataTable extends DataTable
 
             'updated_at' => ['name' => 'Actualizado en', 'data' => 'updated_at'],
 
+
+
+           /* 'marca' => ['name' => 'marca_id', 'data' => 'marca.nombre'],
+
+            'campa&ntilde;a' => ['name' => 'campana', 'data' => 'campana'],
+
             'vines_asociados' => ['name' => 'vin', 'data' => 'vin'],
 
             'fecha_inicio_campana' => ['name' => 'vins.fecha_inicio_campana', 'data' => 'vins.fecha_inicio_campana'],
@@ -222,9 +228,9 @@ class DetalleCampanaDataTable extends DataTable
 
             'importador_2' => ['name' => 'dealer_que_ejecuta_campana', 'data' => 'dealer_que_ejecuta_campana'],
 
-           // 'ejecutor' => ['name' => 'importer_ejecuta', 'data' => 'importer_ejecuta'],
+            'ejecutor' => ['name' => 'importer_ejecuta', 'data' => 'importer_ejecuta'],
 
-            'estado' => ['name' => 'Estados: 1=Activa | 0=Inactiva', 'data' => 'estado'],
+            'estado' => ['name' => 'Estados: 1=Activa | 0=Inactiva', 'data' => 'estado'],*/
 
         ];
 

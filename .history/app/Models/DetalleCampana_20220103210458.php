@@ -106,7 +106,7 @@ class DetalleCampana extends Model implements LogsActivityInterface
         'info_adicional', 
         'estado',
         'created_at',
-        'updated_at',
+        'updated_at'
         'vin',
         'importer_dealer',
         'vendedor',

@@ -222,9 +222,9 @@ class DetalleCampanaDataTable extends DataTable
 
             'importador_2' => ['name' => 'dealer_que_ejecuta_campana', 'data' => 'dealer_que_ejecuta_campana'],
 
-           // 'ejecutor' => ['name' => 'importer_ejecuta', 'data' => 'importer_ejecuta'],
+            'ejecutor' => ['name' => 'importer_ejecuta', 'data' => 'importer_ejecuta'],
 
-            'estado' => ['name' => 'Estados: 1=Activa | 0=Inactiva', 'data' => 'estado'],
+            'estado' => ['name' => 'Estados: 1=Activa | 0=Inactiva', 'data' => 'estado'],*/
 
         ];
 
