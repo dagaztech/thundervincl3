@@ -76,7 +76,7 @@ class DetalleCampana extends Model implements LogsActivityInterface
 
 
     //public $table = 'detalle_campanas';
-    public $table = 'v_historical';
+    public $table = 'v_historicogral';
 
     
 

@@ -156,18 +156,18 @@ class Vin extends Model implements LogsActivityInterface
          */
 
         $campanas_mas_consultadas = DetalleCampana::query()
-            ->selectRaw('v_historical.campana, count(distinct v_historical.id) as total_afectados, 0 as total_atendidos, 
+            ->selectRaw('detalle_campanas.campana, count(distinct detalle_campanas.id) as total_afectados, 0 as total_atendidos, 
             (SELECT IFNULL(SUM(v_vines_con.cantidad_consultas), 0)
                     FROM (select vcon.campana, vcon.cantidad_consultas from v_vines_consultas as vcon inner join v_campanas as 		
                     vcam on vcon.vin = vcam.vin group by vcon.vin, vcon.fecha_ult_consulta) as v_vines_con
-                    WHERE v_vines_con.campana = v_historical.campana) as consultas_efectivas,
+                    WHERE v_vines_con.campana = detalle_campanas.campana) as consultas_efectivas,
                     COUNT(historial_busquedas.texto_busqueda) as consultas_web')
 		    ->leftJoin('historial_busquedas', function($leftJoin){
-            $leftJoin->on('v_historical.campana', '=', 'historial_busquedas.campana');
-            $leftJoin->on('v_historical.vin', '=', 'historial_busquedas.texto_busqueda')
+            $leftJoin->on('detalle_campanas.campana', '=', 'historial_busquedas.campana');
+            $leftJoin->on('detalle_campanas.vin', '=', 'historial_busquedas.texto_busqueda')
                 ->where('historial_busquedas.estado', '=', 1 );
         })
-		->where('v_historical.marca_id', $id)->groupBy('v_historical.campana')
+		->where('detalle_campanas.marca_id', $id)->groupBy('detalle_campanas.campana')
             ->orderBy('consultas_efectivas','desc')->get();
 		$resultado = collect();
 
@@ -176,8 +176,8 @@ class Vin extends Model implements LogsActivityInterface
 			foreach ($campanas_mas_consultadas as $campana){
 				$total_atendidos = DetalleCampana::query()
                 ->selectRaw('COUNT(id) as total_atendidos')
-				->where('v_historical.campana', $campana->campana)
-                ->where('v_historical.marca_id', $id)
+				->where('detalle_campanas.campana', $campana->campana)
+                ->where('detalle_campanas.marca_id', $id)
                 ->whereRaw('fecha_ejecucion_campana<>""')
                     ->first();
 				$campana->total_atendidos = $total_atendidos->total_atendidos;
